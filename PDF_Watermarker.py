@@ -13,7 +13,7 @@ def pdf_watermarker():
             writer = PdfWriter()
 
             reader = PdfReader(pdf_file)
-            page_indices = list(range(0, len(reader.pages)))
+            page_indices = range(0, len(reader.pages))
             for index in page_indices:
                 content_page = reader.pages[index]
                 mediabox = content_page.mediabox
